@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   Shouts.find()
     .then(shout => {
       const messageOfTheDay = process.env.MOTD || 'Hello World!'
-  res.status(200).json({ message: messageOfTheDay, shouts });
+  res.status(200).json({ message: messageOfTheDay, shout });
     })
     .catch(err => {
       res.status(500).json({message: err})
